@@ -71,6 +71,28 @@ const remainingRouter: AppRouteRecordRaw[] = [
     ]
   },
   {
+    path: '/edu',
+    component: Layout,
+    name: 'EduCenter',
+    meta: {
+      title: '学院管理',
+      icon: 'ep:school',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'counselor',
+        component: () => import('@/views/edu/counselor/index.vue'),
+        name: 'EduCounselor',
+        meta: {
+          title: '导员管理',
+          icon: 'ep:avatar',
+          noCache: false
+        }
+      }
+    ]
+  },
+  {
     path: '/user',
     component: Layout,
     name: 'UserInfo',
